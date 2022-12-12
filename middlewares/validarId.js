@@ -1,4 +1,4 @@
-const {Producto} = require('../models/Producto')
+const {Libro} = require('../models/Libro')
 
 const validar = async(req, res, next) => {
     const item = await Producto.findById(req.params.id)

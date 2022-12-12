@@ -5,6 +5,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const productosRouter = require('./routes/productos');
+const consultaAxiosRouter = require('./routes/consultaAxios')
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/productos', productosRouter);
+app.use('/bromas', consultaAxiosRouter)
 
 connect()
 
